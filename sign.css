@@ -1,0 +1,97 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #ffffff;
+    font-family: "Work Sans", sans-serif;
+    margin: 0;
+    height: 60vh;
+}
+
+.container {
+    justify-content: center;
+    text-align: center;
+    padding: 40px;
+    border-radius: 12px;
+}
+
+.logo{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin: 0 auto 16px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 40px;
+    margin: 8px;
+    color: #ff7a00;
+}
+
+h2 {
+    color: #271c08;
+    font-weight: normal;
+}
+label{
+    color: gray;
+    display: flex;
+}
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    padding: 14px;
+    margin: 13px 0;
+    border: 1px solid #AFB1B6;
+    border-radius: 8px;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.password-container {
+    position: relative;
+}
+
+.eye-icon {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+}
+
+button {
+    padding: 16px;
+    margin-top: 16px;
+    background: #271c08;
+    color: white;
+    border: none;
+    border-radius: 16px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background: #ff7a00;
+}
+
+.signin-link {
+    margin-top: 19px;
+    font-size: 14.4px;
+}
+
+.signin-link a {
+    color: black;
+    text-decoration: none;
+}
+
+.signin-link a:hover {
+    text-decoration: underline;
+}
+

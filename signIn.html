@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign in</title>
+    <link href="sign.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class = "container">
+    <div class="logo">
+    <img class="logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRx1ABBo6yjwT5F7xI_7qSC3WT6zKz2Rt0eHA&s" alt="Logo">
+    </div>
+    <h1>Welcome to Stasik hub</h1>
+    <h2>Sign in</h2>
+    <form id="signInForm">
+    <label for="Email">Email</label>
+    <input id="email" type="email" required>
+    <label for="password">Password</label>
+        <div class="password-container">
+            <input id="password" type="password" required>
+                <span id="togglePassword" class="eye-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M11.9996 9.6413C10.6696 9.6413 9.58862 10.7233 9.58862 12.0533C9.58862 13.3823 10.6696 14.4633 11.9996 14.4633C13.3296 14.4633 14.4116 13.3823 14.4116 12.0533C14.4116 10.7233 13.3296 9.6413 11.9996 9.6413ZM11.9996 15.9633C9.84262 15.9633 8.08862 14.2093 8.08862 12.0533C8.08862 9.8963 9.84262 8.1413 11.9996 8.1413C14.1566 8.1413 15.9116 9.8963 15.9116 12.0533C15.9116 14.2093 14.1566 15.9633 11.9996 15.9633Z" fill="#AFB1B6"/>
+                        <mask id="mask0_823_24" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="2" y="4" width="20" height="17">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M2.00012 4.0002H22V20.1052H2.00012V4.0002Z" fill="white"/>
+                        </mask>
+                        <g mask="url(#mask0_823_24)">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M3.56987 12.0525C5.42987 16.1615 8.56287 18.6045 11.9999 18.6055C15.4369 18.6045 18.5699 16.1615 20.4299 12.0525C18.5699 7.9445 15.4369 5.5015 11.9999 5.5005C8.56387 5.5015 5.42987 7.9445 3.56987 12.0525ZM12.0019 20.1055H11.9979H11.9969C7.86087 20.1025 4.14687 17.2035 2.06087 12.3485C1.97987 12.1595 1.97987 11.9455 2.06087 11.7565C4.14687 6.9025 7.86187 4.0035 11.9969 4.0005C11.9989 3.9995 11.9989 3.9995 11.9999 4.0005C12.0019 3.9995 12.0019 3.9995 12.0029 4.0005C16.1389 4.0035 19.8529 6.9025 21.9389 11.7565C22.0209 11.9455 22.0209 12.1595 21.9389 12.3485C19.8539 17.2035 16.1389 20.1025 12.0029 20.1055H12.0019Z" fill="#AFB1B6"/>
+                        </g>
+                        </svg>
+                </span>
+        </div>
+    <button type="submit">Sign in</button>
+    </form>
+    <div class="signin-link"> Don't have account? <a href="signUp.html">Sign up</a></p>
+</div>
+<script src="signIn.js"></script>
+</body>
+</html>
