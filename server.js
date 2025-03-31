@@ -1,6 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const encodePassword = require('./hash').encodePassword;
+const generateToken = require('./hash').generateToken;
 const app = express();
 
 app.use(cors());
@@ -11,7 +12,8 @@ app.get('/', (req, res) => {
   res.send('Ви майже на Stasik Hub ඞ');
 }); 
 
-app.post('/sign-up', (req, res) => {
+app.post('/sign-up', (
+  req, res) => {
     const { email, password } = req.body;
 
     if (!email || !password) {
@@ -47,7 +49,7 @@ app.post('/sign-in', (req, res) => {
       return res.status(401).json({ message: 'Invalid email or password' });
   }
 
-  res.status(200).json({ message: 'Авторизація успішна!' });
+  res.status(200).json({ token: generateToken(email), message: "Registration succsessful" });
 });
 
 app.listen(3000, () => {
