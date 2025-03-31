@@ -38,17 +38,30 @@ togglePassword.addEventListener("click", function () {
 
 
 
-fetch('http://localhost:3000/sign-up', {
-    method: 'POST',
-    headers: {
-        'Content-Type': 'application/json'
-    },
-    body: JSON.stringify({
-        email,
-        password
-    })
-}).then(response => {
-    return response.json()
-}).then(data => {
-    console.log(data)
-})
+document.getElementById("signUpForm").addEventListener("submit", async (e) => {
+e.preventDefault()
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
+
+    try {
+        const response = await fetch("http://localhost:3000/sign-up", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({ email, password })
+        });
+
+        const data = await response.json();
+        
+        if (!response.ok) {
+            throw new Error(data.message || "Помилка реєстрації");
+        }
+
+        alert("Реєстрація успішна!");
+        window.location.href = "signIn.html";
+    } catch (error) {
+        console.error("Помилка:", error);
+        alert(error.message);
+    }   
+});
