@@ -50,5 +50,6 @@ document.getElementById("signInForm").addEventListener("submit", async function 
     });
 
     const result = await response.json();
-    alert(result.message);
+    localStorage.setItem("token",result.token);
+    alert(result.message)
 });
