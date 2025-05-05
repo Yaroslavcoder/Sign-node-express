@@ -11,11 +11,11 @@ let upgradeList = [
   { id: 3, name: "Power Tap", description: "ClickCoins per click x2", price: 1000 },
 ];
 
-app.get('/upgrades', (req, res) => {
+app.get('', (req, res) => {
   res.json(upgradeList);
 });
 
-app.get('/upgrades/:id', (req, res) => {
+app.get('/:id', (req, res) => {
   const upgradeId = Number(req.params.id);
   const foundUpgrade = upgradeList.find(u => u.id === upgradeId);
 
@@ -26,7 +26,7 @@ app.get('/upgrades/:id', (req, res) => {
   }
 });
 
-app.post('/upgrades', (req, res) => {
+app.post('', (req, res) => {
   const { id, name, description, price } = req.body;
   const exists = upgradeList.some(item => item.id === id);
 
@@ -39,7 +39,7 @@ app.post('/upgrades', (req, res) => {
   res.status(201).json(newItem);
 });
 
-app.put('/upgrades/:id', (req, res) => {
+app.put('/:id', (req, res) => {
   const targetId = Number(req.params.id);
   const { name, description, price } = req.body;
 
@@ -57,7 +57,7 @@ app.put('/upgrades/:id', (req, res) => {
   res.json(upgradeList[itemIndex]);
 });
 
-app.delete('/upgrades/:id', (req, res) => {
+app.delete('/:id', (req, res) => {
   const delId = Number(req.params.id);
   const position = upgradeList.findIndex(upg => upg.id === delId);
 
