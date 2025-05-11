@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clicker Game</title>
+    <link rel="stylesheet" href="styles/tap.css">
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo">LOGO</div>
+        <nav>
+            <a href="#" class="menu">Home</a>
+            <a href="#" class="menu">Market</a>
+            <a href="#" class="menu">Rating</a>
+        </nav>
+        <div class="user-info">
+            <div class="profile">
+                <img src="https://i.pinimg.com/736x/cb/8c/b5/cb8cb51aef87cd09bbea19c97fc11eef.jpg" alt="User" class="profile-pic">
+                <div class="user-details">
+                    <a class="user-name">Tony Stank</a>
+                    <div class="coins">
+                        <img src="images/Coin.png" class="coin-icon" alt="coin">
+                        <span>19 247</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </header>
+    
+    <main>
+        <div class="shop">
+            <aside class="modifier-container">
+                <div class="modifier">
+                    <div><img src="https://cdn-icons-png.flaticon.com/512/1819/1819265.png" class="modifier-img"></div>
+                    <div class="content">
+                        <span>Click Accelerator</span>
+                        <p>Speed of earning x10</p>
+                        <div class="price">
+                            <img src="images/Coin.png" class="coin-icon" alt="coin">
+                            <span>4 000</span>
+                        </div>
+                    </div>
+                    <button onclick="buyUpgrade('click-accelerator')">Buy</button>
+                </div>
+                <div class="modifier">
+                    <div><p class="modifier-img">X10</p> </div>
+                    <div class="content">
+                        <span>Coin Multiplier</span>
+                        <p>ClickCoins per click x10</p>
+                        <div class="price">
+                            <img src="images/Coin.png" class="coin-icon" alt="coin">
+                            <span>4 000</span>
+                        </div>
+                    </div>
+                    <button onclick="buyUpgrade('coin-multiplier')">Buy</button>
+                </div>
+                <div class="modifier">
+                    <div><img src="https://cdn1.iconfinder.com/data/icons/sports-114/512/Untitled-42-512.png" class="modifier-img"></div>
+                    <div class="content">
+                        <span>Power Tap</span>
+                        <p>ClickCoins per click x2</p>
+                        <div class="price">
+                            <img src="images/Coin.png" class="coin-icon" alt="coin">
+                            <span>1 000</span>
+                        </div>
+                    </div>
+                    <button onclick="buyUpgrade('power-tap')">Buy</button>
+                </div>
+                <div class="modifier">
+                    <div><img src="https://as2.ftcdn.net/jpg/02/09/56/67/1000_F_209566765_PohFLbLPOmaYQvMkIigYa1EBhLnJlLN0.jpg" class="modifier-img"></div>
+                    <div class="content">
+                        <span>Coin Stream </span>
+                        <p>Passive income x10</p>
+                        <div class="price">
+                            <img src="images/Coin.png" class="coin-icon" alt="coin">
+                            <span>4 000</span>
+                        </div>
+                    </div>
+                    <button onclick="buyUpgrade('coin-stream')">Buy</button>
+                </div>
+                <div class="modifier">
+                    <div><img src="https://static.wikia.nocookie.net/fortnite_gamepedia/images/4/43/Gold_TouchSpray.png/revision/latest/scale-to-width-down/250?cb=20200302202401" class="modifier-img"></div>
+                    <div class="content">
+                        <span>Golden Touch</span>
+                        <p>Random bonus on click</p>
+                        <div class="price">
+                            <img src="images/Coin.png" class="coin-icon" alt="coin">
+                            <span>4 000</span>
+                        </div>
+                    </div>
+                    <button onclick="buyUpgrade('golden-touch')">Buy</button>
+                </div>
+                <div class="modifier">
+                    <div><img src="https://stormsend1.djicdn.com/tpc/uploads/spu/cover/1190c3e96a2fbf8d20cfc0d806f89489@origin.png" class="modifier-img"> </div>
+                    <div class="content">
+                        <span>Mining Drone</span>
+                        <p>Automated clicks for 1 min</p>
+                        <div class="price">
+                            <img src="images/Coin.png" class="coin-icon" alt="coin">
+                            <span>10 000</span>
+                        </div>
+                    </div>
+                    <button onclick="buyUpgrade('Mining Drone')">Buy</button>
+                </div>
+                <button class="scroll-button"><img src="images/Arrow Down.png" alt="Scroll Down"></button>
+            </aside>
+        </div>
+        <div class="center">
+            <div class="game-stats">
+                <div class="stat-box left-border">
+                    <img src="https://minecraft-max.net/upload/iblock/004/0044a60f9b062cb6bad14cccdc4acf2b.png" class="image-placeholder">
+                    <div>
+                        <span class="stat-value"><h3>19 247</h3></span>
+                        <p>Total ClickCoins</p>
+                    </div>
+                </div>
+                <div class="stat-box">
+                    <img src="https://minecraft-max.net/upload/iblock/004/0044a60f9b062cb6bad14cccdc4acf2b.png" class="image-placeholder">
+                    <div>
+                        <span class="stat-value" id="coinsPerClick"><h3>1</h3></span>
+                        <p>Coins per Click</p>
+                    </div>
+                </div>
+                <div class="stat-box right-border">
+                    <img src="https://minecraft-max.net/upload/iblock/004/0044a60f9b062cb6bad14cccdc4acf2b.png" class="image-placeholder">
+                    <div>
+                        <span class="stat-value" id="passiveIncome"><h3>1/sec</h3></span>
+                        <p>Passive Income</p>
+                    </div>
+                </div>
+            </div>
+            <div class="click-container">
+                <button class="click-button">
+                    <img src="images/reactor.png" alt="Click Button">
+                </button>
+            </div>
+        </div> 
+    </main>
+    <footer>
+        <a href="#">About game </a>
+        <a href="#">Help center  </a>
+        <a href="#">Rules</a>
+    </footer>
+    
+
+    <script src="frontend.js"></script>
+</body>
+</html>
